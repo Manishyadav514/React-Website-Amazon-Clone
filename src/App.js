@@ -1,4 +1,3 @@
-import './App.css';
 import Amazon from './amazon-main/Amazon.js'
 
 function App() {

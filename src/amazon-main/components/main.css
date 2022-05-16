@@ -1,0 +1,227 @@
+/* Header.js=============================================== */
+.navbar-show{
+    position: sticky;
+    top:0;
+    display:flex;
+    padding:5px;
+    /* width:100%; */
+    height:45px;
+    background-color:#131921;
+    z-index: 1;
+    visibility: visible;
+    transition-timing-function:ease-in;
+    transition: all 0.5s;
+}
+.navbar-logo{
+    height: 30px;
+    /* position: fixed; */
+    object-fit: contain;
+    visibility: visible;
+    padding: 10px;
+    margin-left: 10px;
+}
+.navbar-profile-logo{
+    position:fixed;
+    width:30px;
+    right:20px;
+    object-fit:contain;
+}
+.flag{
+    height: 16px;
+    object-fit: contain;
+    visibility: visible;
+    margin-top: 10px;;
+    padding: 10px;
+}
+.reverse{
+    flex-direction: row-reverse;
+    color:"F3F3F3"
+}
+.search-bar{
+    display:flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 240px;
+}
+.search-bar-input{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width:100%;
+}
+.search-bar-icon{
+    padding: 5px;
+    height: 22px !important;
+    background-color: #ed9042;
+    border-radius: 0px 7px 7px 0px;
+}
+.search-bar-text{
+    padding: 5px;
+    height: 22px !important;
+    background-color: #F3F3F3;
+    font-size: 11px;
+    border-radius: 7px 0px 0px 7px;
+}
+.header-options{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10px;
+}
+.header-option-menu{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.header-option-menu-one{
+    font-size: 10px;
+}
+.header-option-menu-two{
+    font-size: 13px;
+    font-weight: 800;
+}
+.header-basket{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.header-basket-count{
+    /* position: fixed; */
+    margin-top: -40px;
+    color: #F08804;
+    font-size: 18px;
+    /* line-height: 16px; */
+}
+.header-basket-text{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.second-navbar{
+    width: 100%;
+    height: 35px;
+    background-color: #232f3e;
+    display: flex;
+    flex-direction: row;
+}
+.second-navbar-text-content{
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.second-navbar-text-content > p{
+    color: white;
+    font-size: 14px;
+    /* box-sizing: content-box; */
+    font-family: inherit;
+    cursor: pointer;
+    margin: 0px 5px;
+    /* margin-right: 5px; */
+    padding: 5px;
+}
+
+.second-navbar-image{
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home.js=============================================== */
+.home{
+    display: flex;
+    /* justify-content: center; */
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    /* max-width: 1500px; */
+}
+.home-container{
+
+}
+.home-image{
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    z-index: -1;
+    margin-bottom: -330px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+}
+
+.home-card-container{
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ProductCard.js=============================================== */
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    /* max-height: 300px; */
+    min-width: 100px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    z-index: 0;
+    flex-wrap: wrap;
+}
+.product > img{
+    max-width: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin: 15px 5px;
+}
+
+.product > button{
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #2c240e;
+    color: #111;
+    border-radius: 5px;
+    height: 30px;
+}
+.product-rating{
+    display: flex;
+}
+.product-price{
+    margin-top: 5px;
+}
+.product-title{
+    font-size: 14px;
+    font-weight: 700;
+}
+.product-info{
+    height: 100px;
+    margin-bottom: 15px;
+}
