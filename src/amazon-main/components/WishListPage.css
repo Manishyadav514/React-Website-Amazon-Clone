@@ -1,0 +1,11 @@
+.wishlist-button-text {
+    color: black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    width: -webkit-fill-available;
+  }

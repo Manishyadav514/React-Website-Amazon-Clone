@@ -1,23 +1,18 @@
 // import React, { useState, useEffect } from "react";
 import AmazonLogo from "../media/AmazonLogo (3).png";
-import "./main.css";
+import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import IndianFlag from "../media/indian-flag.jpg";
 import { Link } from "react-router-dom";
+import { CartState } from "../functionality/Context.js";
+import {AiFillHeart } from "react-icons/ai";
+
 const Header = () => {
-  // const [show, handleShow] = useState(true);
-  // useEffect(() => {
-  //   window.addEventListener("scroll",()=>{
-  //     if (window.scrollY>100){
-  //         handleShow(false);
-  //     } else handleShow(true);
-  //   });
-  //   return ()=>{
-  //     // window.removeEventlistener("scroll");
-  //     console.log("removedEventListner")
-  //   };
-  // }, []);
+
+  const {
+    state: { cart },
+  } = CartState();
 
   return (
     <>
@@ -30,8 +25,8 @@ const Header = () => {
 
         <div className="header-options">
           <div className="header-option-menu">
-            <span className="header-option-menu-one">Deliver to Yadav</span>
-            <span className="header-option-menu-two">Tulsipur 271208</span>
+            <span className="header-option-menu-one">Deliver to FoxArchive</span>
+            <span className="header-option-menu-two">Delhi 110001</span>
           </div>
         </div>
 
@@ -56,24 +51,35 @@ const Header = () => {
             <span className="header-option-menu-one">Return</span>
             <span className="header-option-menu-two">& Order</span>
           </div>
+          <Link to="/WishListPage">
+          <div className="header-basket">            <AiFillHeart
+              style={{ color: "white", fontSize: "1.3rem", margin: 5 }}
+            /></div>
 
-          <div className="header-basket">
-            <ShoppingCartOutlinedIcon />
-            <span className="header-basket-count">0</span>
-            <span className="header-basket-text">Cart</span>
-          </div>
+          </Link>
+          <Link to="/CheckOutPage">
+            <div className="header-basket">
+              <ShoppingCartOutlinedIcon />
+              <span className="header-basket-count">{cart.length}</span>
+              <span className="header-basket-text">Cart</span>
+            </div>
+          </Link>
         </div>
       </div>
 
-      <div className="second-navbar">
-        <div className="second-navbar-text-content">
+      <div className="secondNavbar">
+        <div className="secondNavbar-text-content">
+        <Link to="/ProductPage">
           <p>≡ All</p>
+        </Link>
           <p>Fresh</p>
           <p>Mobiles</p>
           <p>Computers</p>
           <p>Buy Again</p>
           <p>Gift Cards</p>
+          <Link to="/ProductPage">
           <p>Baby</p>
+        </Link>
           <p>Browsing History</p>
           <p>Amazon Pay</p>
           <p>Grocery & Gourmet Foods</p>
@@ -81,7 +87,7 @@ const Header = () => {
 
         <Link to="/ProductPage">
           <img
-            className="second-navbar-image"
+            className="secondNavbar-image"
             src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/FT_SWM_400x39_211._CB623007921_.jpg"
             alt="PrimeLogo"
           />

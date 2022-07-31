@@ -1,0 +1,21 @@
+.home {
+display: flex;
+flex-direction: row;
+}
+
+.filterContainer {
+display: flex;
+width: 23%;
+float: left;
+padding: 10px;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.productContainer {
+display: flex;
+width: 75%;
+float: right;
+padding: 10px;
+flex-wrap: wrap;
+justify-content: space-around;
+}

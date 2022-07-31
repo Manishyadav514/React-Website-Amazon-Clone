@@ -1,0 +1,89 @@
+
+/* CheckOutPage.js=============================================== */
+.checkout-container{
+    margin: 30px 15px;
+    display: flex;
+    flex-direction: row;
+}
+.checkout-left-box{
+    background-color: #FFF;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    overflow: auto;
+    padding: 20px 10px 15px 10px;
+    /* display: flex;
+    flex-direction: column; */
+}
+.checkout-right-box{
+    background-color: white;
+    float: left;
+    margin-left: 10px;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 10px 15px 10px;
+    max-width: 280px;
+}
+.checkout-left-text-cart{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+}
+.checkout-left-text-total{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 36px;
+    /* margin-left: 700px; */
+    float: right;
+}
+.checkout-item-list{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    min-height: 100px;
+    margin: 10px 0px;
+}
+.checkout-item-list-item{
+
+}
+
+
+
+/* SubTotal.js=============================================== */
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #fddddd;
+    border-radius: 3px;
+  }
+  .subtotalText p, strong{
+    font-size: 18px;
+  }
+  .subtotal-gift p{
+    font-size: 14px;
+  }
+  .subtotal-gift{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .subtotal-gift-input{
+    cursor: pointer;
+  }
+  .subtotalButton{
+    background-color: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 38px;
+    border: 1px solid #fddddd;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    cursor: pointer;
+  }

@@ -1,20 +1,24 @@
 import React from "react";
 import Header from "./components/Header.js";
-import ProductPage from "./components/ProductPage.js";
-import HomePage from "./components/HomePage.js";
-// import Test from './components/test.js'
-// import MultiActionAreaCard from './components/MultiActionAreaCard.js'
+import WishListPage from "./components/WishListPage.js";
+import CheckOutPage from "./components/CheckOutPage.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Products from "./components/ProductPage.js";
+import LoginPage from "./components/LoginPage.js"
+import Rating from "./components/Rating.js"
 
 import "./Amazon.css";
+import HomePage from "./components/HomePage.js";
 const Amazon = () => {
   return (
     <>
-      <Router>
+       <Router>
         <Routes>
-        <Route exact path="/ProductPage" element={<><Header/><HomePage/></>}/>
-        <Route exact path="/CheckOut" element={<><Header/></>}/> 
-        <Route exact path="/" element={<><Header/><ProductPage/></>}/>  
+        <Route exact path="/CheckOutPage" element={<><Header/><CheckOutPage/></>}/>
+        <Route exact path="/ProductPage" element={<><Header/><Products/><Rating/></>}/> 
+        <Route exact path="/WishListPage" element={<><Header/><WishListPage/></>}/> 
+        <Route exact path="/" element={<><Header/><HomePage/></>}/>  
+        <Route exact path="/LoginPage" element={<><LoginPage/></>}/>  
         </Routes>
       </Router>
     </>
