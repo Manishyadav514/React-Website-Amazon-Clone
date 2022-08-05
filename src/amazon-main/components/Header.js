@@ -1,12 +1,11 @@
 // import React, { useState, useEffect } from "react";
 import AmazonLogo from "../media/AmazonLogo (3).png";
 import "./Header.css";
-import SearchIcon from "@material-ui/icons/Search";
-import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import IndianFlag from "../media/indian-flag.jpg";
 import { Link } from "react-router-dom";
 import { CartState } from "../functionality/Context.js";
 import {AiFillHeart } from "react-icons/ai";
+import {FaShoppingCart, FaSearch} from "react-icons/fa"
 
 const Header = () => {
 
@@ -34,7 +33,7 @@ const Header = () => {
           <span className="search-bar-text">All&#709;</span>
 
           <input className="search-bar-input" type="text"></input>
-          <SearchIcon className="search-bar-icon" />
+          <FaSearch className="search-bar-icon" />
         </div>
 
         <div className="header-options">
@@ -59,7 +58,7 @@ const Header = () => {
           </Link>
           <Link to="/CheckOutPage">
             <div className="header-basket">
-              <ShoppingCartOutlinedIcon />
+              <FaShoppingCart />
               <span className="header-basket-count">{cart.length}</span>
               <span className="header-basket-text">Cart</span>
             </div>

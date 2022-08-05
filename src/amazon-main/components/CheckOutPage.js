@@ -1,5 +1,5 @@
 import "./CheckOutPage.css";
-import CurrencyFormat from "react-currency-format";
+// import CurrencyFormat from "react-currency-format";
 import React, { useState, useEffect } from "react";
 import { CartState } from "../functionality/Context.js";
 import { AiFillDelete } from "react-icons/ai";

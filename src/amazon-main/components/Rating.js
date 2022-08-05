@@ -6,7 +6,7 @@ const Rating = ({ rating, onClick, style }) => {
     <div>
       {[...Array(5)].map((_, i) => (
         <span key={i} onClick={() => onClick(i)} style={style}>
-          {rating > i ? <AiFillStar /> : <AiOutlineStar />}
+          {rating > i ? <AiFillStar className="w-5 h-5 text-yellow-300"/> : <AiFillStar className="w-5 h-5 text-neutral-50"/>}
         </span>
       ))}
     </div>
