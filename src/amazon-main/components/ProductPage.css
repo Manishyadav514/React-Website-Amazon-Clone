@@ -1,6 +1,7 @@
 .home {
-display: flex;
-flex-direction: row;
+display: -webkit-inline-box;
+justify-content: space-between;
+
 }
 
 .filterContainer {

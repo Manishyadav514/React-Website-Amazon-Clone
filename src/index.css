@@ -9,13 +9,14 @@ body {
 }
 html * {
   font-size: 16px;
-  line-height: 1.625;
   font-family: Nunito, sans-serif;
 }
 a{
   text-decoration: none;
 }
-
+ul, li{
+  list-style: none
+}
 
 /* @tailwind base; */
 @tailwind components;

@@ -1,0 +1,67 @@
+.item1 {
+  grid-area: title;
+}
+.item2 {
+  grid-area: image;
+}
+.item3 {
+  grid-area: stock;
+}
+.item3 p {
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+.item4 {
+  grid-area: price;
+}
+.item5 {
+  grid-area: function;
+}
+
+.grid-container {
+  display: grid;
+  background-color: rgb(246, 249, 252);
+  border: 1px solid rgb(167, 167, 167);
+  grid-template-areas:
+    "image title  title price"
+    "image stock stock  price"
+    "image function  function price"
+    "image function  function price";
+  padding: 10px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 960px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "image title  title title"
+      "image price price  price"
+      "image stock  stock stock"
+      "function function  function function";
+  }
+}
+
+.image-box {
+  width: 180px;
+  aspect-ratio: auto 180 / 180;
+  height: 180px;
+}
+.card-image {
+  height: 100%;
+  object-fit: fill;
+}
+.product-description {
+}
+.product-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1111;
+  cursor: pointer;
+}
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 960px) {
+}

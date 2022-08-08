@@ -54,8 +54,8 @@ const Products = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center">
-        <div className="top-0">
+      <div className="flex justify-between ">
+        <div className="filterContainer">
           <Filter />
         </div>
         <div className="productContainer">
