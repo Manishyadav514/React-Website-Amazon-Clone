@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { CartState } from "../functionality/Context.js";
 import { AiFillDelete } from "react-icons/ai";
 import { ListGroup, Row, Col, Form, Image } from "react-bootstrap";
+import CheckOutCard from "./CheckOutCard.js"
 import Rating from "./Rating.js";
 
 const CheckOutPage = () => {
@@ -43,6 +44,7 @@ const CheckOutPage = () => {
         <div className="checkout-left-text-cart">Shopping Cart</div>
         <div className="checkout-item-list">
           <div className="checkout-item-list-item">
+          <CheckOutCard/>
             <ListGroup>
               {cart.map((product) => (
                 <ListGroup.Item key={product.id}>

@@ -1,5 +1,4 @@
 import React from "react";
-import "../Amazon.css";
 
 const ProductCard = ({ id, title, image, price, rating, description }) => {
   // console.log(useStateValue);

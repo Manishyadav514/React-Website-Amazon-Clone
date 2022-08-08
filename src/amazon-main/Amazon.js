@@ -6,9 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./components/ProductPage.js";
 import LoginPage from "./components/LoginPage.js"
 import Rating from "./components/Rating.js"
-
-import "./Amazon.css";
 import HomePage from "./components/HomePage.js";
+
 const Amazon = () => {
   return (
     <>

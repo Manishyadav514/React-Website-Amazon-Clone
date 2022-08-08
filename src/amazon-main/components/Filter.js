@@ -1,5 +1,4 @@
-// import React, { useState } from "react";
-import { Form, Button, FormControl } from "react-bootstrap";
+import React from "react";
 import Rating from "./Rating.js";
 import { CartState } from "../functionality/Context.js";
 

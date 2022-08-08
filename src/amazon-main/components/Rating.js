@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 
 const Rating = ({ rating, onClick, style }) => {
   return (

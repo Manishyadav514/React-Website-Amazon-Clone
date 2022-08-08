@@ -4,11 +4,11 @@ import "./Header.css";
 import IndianFlag from "../media/indian-flag.jpg";
 import { Link } from "react-router-dom";
 import { CartState } from "../functionality/Context.js";
-import {AiFillHeart } from "react-icons/ai";
-import {FaShoppingCart, FaSearch} from "react-icons/fa"
+import { AiFillHeart } from "react-icons/ai";
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FiMapPin } from "react-icons/fi";
 
 const Header = () => {
-
   const {
     state: { cart },
   } = CartState();
@@ -23,15 +23,19 @@ const Header = () => {
         </div>
 
         <div className="header-options">
+          <div className="header-pin-logo">
+            <FiMapPin style={{ color: "white" }} />
+          </div>
           <div className="header-option-menu">
-            <span className="header-option-menu-one">Deliver to FoxArchive</span>
+            <span className="header-option-menu-one">
+              Deliver to FoxArchive
+            </span>
             <span className="header-option-menu-two">Delhi 110001</span>
           </div>
         </div>
 
         <div className="search-bar">
           <span className="search-bar-text">All&#709;</span>
-
           <input className="search-bar-input" type="text"></input>
           <FaSearch className="search-bar-icon" />
         </div>
@@ -51,10 +55,12 @@ const Header = () => {
             <span className="header-option-menu-two">& Order</span>
           </div>
           <Link to="/WishListPage">
-          <div className="header-basket">            <AiFillHeart
-              style={{ color: "white", fontSize: "1.3rem", margin: 5 }}
-            /></div>
-
+            <div className="header-basket">
+              {" "}
+              <AiFillHeart
+                style={{ color: "white", fontSize: "1.3rem", margin: 5 }}
+              />
+            </div>
           </Link>
           <Link to="/CheckOutPage">
             <div className="header-basket">
@@ -68,20 +74,16 @@ const Header = () => {
 
       <div className="secondNavbar">
         <div className="secondNavbar-text-content">
-        <Link to="/ProductPage">
-          <p>≡ All</p>
-        </Link>
-          <p>Fresh</p>
-          <p>Mobiles</p>
-          <p>Computers</p>
-          <p>Buy Again</p>
-          <p>Gift Cards</p>
-          <Link to="/ProductPage">
-          <p>Baby</p>
-        </Link>
-          <p>Browsing History</p>
-          <p>Amazon Pay</p>
-          <p>Grocery & Gourmet Foods</p>
+          <Link to="/ProductPage">≡ All</Link>
+          <Link to="/ProductPage">Fresh</Link>
+          <Link to="/ProductPage">Mobiles</Link>
+          <Link to="/ProductPage">Baby</Link>
+          <Link to="/ProductPage">Computers</Link>
+          <Link to="/ProductPage">Buy Again</Link>
+          <Link to="/ProductPage">Gift Cards</Link>
+          <Link to="/ProductPage">Browsing History</Link>
+          <Link to="/ProductPage">Amazon Pay</Link>
+          <Link to="/ProductPage">Grocery & Gourmet Foods</Link>
         </div>
 
         <Link to="/ProductPage">
