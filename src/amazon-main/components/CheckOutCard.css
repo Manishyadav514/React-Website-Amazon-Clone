@@ -52,6 +52,8 @@
   object-fit: fill;
 }
 .product-description {
+  font-size: 14px;
+  color: "#565959"
 }
 .product-title {
   font-size: 18px;
@@ -63,5 +65,28 @@
   font-size: 18px;
   font-weight: 700;
 }
-@media only screen and (max-width: 960px) {
+.change-quantity{
+  text-align: center;
+  width: 30px;
+  background: #F0F2F2;
+  border-radius: 5px;
+  margin: 0px 10px 0px 10px;
+}
+.items-update{
+display:flex;
+flex-direction: row;
+gap: 10px;
+align-items: center;
+}
+.items-update li{
+  background: 0 0;
+  border: 0;
+  color: #007185;
+  cursor: pointer;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  font: inherit;
+  line-height: inherit;
+  font-size: 12px;
 }

@@ -7,6 +7,7 @@ import Products from "./components/ProductPage.js";
 import LoginPage from "./components/LoginPage.js"
 import Rating from "./components/Rating.js"
 import HomePage from "./components/HomePage.js";
+import ProductDetails from "./components/ProductDetails"
 
 const Amazon = () => {
   return (
@@ -18,6 +19,8 @@ const Amazon = () => {
         <Route exact path="/WishListPage" element={<><Header/><WishListPage/></>}/> 
         <Route exact path="/" element={<><Header/><HomePage/></>}/>  
         <Route exact path="/LoginPage" element={<><LoginPage/></>}/>  
+        <Route exact path="/ProductPage/productID" element={<><Header/><ProductDetails/></>}/>  
+        {/* <Route path="/person/:personId" component={PersonPage} /> */}
         </Routes>
       </Router>
     </>

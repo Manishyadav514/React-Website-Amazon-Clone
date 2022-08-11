@@ -56,13 +56,18 @@
   width: 100%;
 }
 .search-bar-text {
-    height: 40px;
-    width: 40px;
-    background-color: #f3f3f3;
-    font-size: 15px;
-    border-radius: 7px 0px 0px 7px;
-    text-align: center;
-    font-weight: 600;
+  height: 40px;
+  width: 40px;
+  background-color: #f3f3f3;
+  font-size: 12px;
+  border-radius: 7px 0px 0px 7px;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
 }
 .search-bar-input {
     height: 38px;
@@ -71,11 +76,13 @@
     width: 100%;
 }
 .search-bar-icon {
-    height: 40px;
-    width: 26px;
-    padding-left: 10px;
-    background-color: #ed9042;
-    border-radius: 0px 7px 7px 0px;
+  height: 40px;
+  width: 34px;
+  padding-left: 10px;
+  background-color: #ed9042;
+  border-radius: 0px 7px 7px 0px;
+  display: flex;
+  align-items: center;
 }
 .header-pin-logo {
   margin-top: 10px;
@@ -85,6 +92,11 @@
   display: flex;
   justify-content: space-evenly;
   margin: 10px 0 10px 7px;
+}
+.checkout-box{
+  display: flex;
+  margin: 10px 0 10px 7px;
+  gap: 10px;
 }
 .header-option-menu {
   display: flex;
@@ -113,12 +125,10 @@
   color: white;
 }
 .header-basket-count {
-  /* position: fixed; */
-  margin-top: -35px;
-  margin-left: -17px;
+  margin-top: -32px;
+  margin-left: -20px;
   color: #f08804;
   font-size: 18px;
-  /* line-height: 16px; */
 }
 .header-basket-text {
   margin-left: 10px;
@@ -165,4 +175,12 @@
   height: 30px;
   position: absolute;
   right: 0;
+}
+@media only screen and (max-width: 960px) {
+  .header-options{
+    display: none;
+  }
+  .search-bar{
+    margin: 0 15px 0 15px;
+  }
 }

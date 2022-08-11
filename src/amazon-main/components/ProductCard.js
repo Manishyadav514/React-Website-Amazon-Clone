@@ -2,6 +2,9 @@ import React from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import Rating from "./Rating.js";
 import { CartState } from "../functionality/Context.js";
+import ProductDetails from "./ProductDetails";
+import { Link } from "react-router-dom";
+
 const ProductCard = (props) => {
   // console.log(props);
   // console.log(props.product.image);
@@ -15,17 +18,20 @@ const ProductCard = (props) => {
   } = CartState();
 
   // console.log(cart);
+  // const productDetails = () => {
+  //   <ProductDetails product={"product"} />;
+  // };
 
   return (
     <div>
       <div className="max-w-sm m-4 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <a href="/">
+        <Link to={`/ProductPage/${props.product.id}`}>
           <img
             className="p-8 rounded-t-lg"
             src={props.product.image}
             alt="product"
           ></img>
-        </a>
+        </Link>
         <div className="px-5 pb-5">
           <a href="/">
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
@@ -43,7 +49,7 @@ const ProductCard = (props) => {
           <div className="flex justify-between items-center mt-2.5 mb-5">
             <Rating rating={props.product.ratings} />
             <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-            {props.product.ratings}
+              {props.product.ratings}
             </span>
           </div>
           <div className="flex justify-between items-center">

@@ -3,7 +3,7 @@ import "./CheckOutPage.css";
 import React, { useState, useEffect } from "react";
 import { CartState } from "../functionality/Context.js";
 import CheckOutCard from "./CheckOutCard.js";
-
+import { BsCheckCircleFill } from "react-icons/bs";
 const CheckOutPage = () => {
   const {
     state: { cart },
@@ -54,15 +54,20 @@ const CheckOutPage = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="checkout-right-box">
+        {" "}
         <div className="subtotal">
           <div className="subtotalText">
-            <p>
+            <span>
+              <BsCheckCircleFill style={{ fontSize: 11 }} /> Your order is
+              eligible for FREE Delivery.
+            </span>
+            <p className="subtotalFont">
               SubTotal ({cart.length} items): <strong>₹{total}</strong>
             </p>
             <small className="subtotal-gift">
               <input type="checkbox" className="subtotal-gift-input" />
-              <p>This order contains a gift</p>
+              <p className="subtotal-gift-text">This order contains a gift</p>
             </small>
           </div>
           <button onClick={checkoutFunction} className="subtotalButton">

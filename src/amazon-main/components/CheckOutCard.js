@@ -3,34 +3,38 @@ import "./CheckOutCard.css";
 const CheckOutCard = (props) => {
   return (
     <div id={props.product.id} className="grid-container">
-        <div class="item1">
-          <h5 className="product-title">{props?.product?.name}</h5>
-          <p className="product-description">{props?.product?.description}</p>
+      <div class="item1">
+        <h5 className="product-title">{props?.product?.name}</h5>
+        <p className="product-description"> {props?.product?.description}</p>
+      </div>
+      <div class="item2">
+        <div className="image-box">
+          <img
+            className="card-image"
+            src={props?.product?.image}
+            alt={props?.product?.name}
+          />
         </div>
-        <div class="item2">
-          <div className="image-box">
-            <img
-              className="card-image"
-              src={props?.product?.image}
-              alt={props?.product?.name}
-            />
-          </div>
-        </div>
-        <div class="item3">
-          <p style={{color:"#007600"}}>In stock</p>
-          <p style={{color:"#565959"}}>Eligible for FREE Shipping</p>
-        </div>
-        <div class="item4">
-          {" "}
-          <div className="product-price">
-          ₹ {props?.product?.price}
-          </div>
-        </div>
-        <div class="item5">
-          <p className="">
-            Qty | Delete |Save for later
+      </div>
+      <div class="item3">
+        <p style={{ color: "#007600" }}>In stock</p>
+        <p style={{ color: "#565959" }}>Eligible for FREE Shipping</p>
+      </div>
+      <div class="item4">
+        {" "}
+        <div className="product-price">₹ {props?.product?.price}</div>
+      </div>
+      <div class="item5">
+        <ul className="items-update">
+          <li>
             <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              max="5"
               as="select"
+              className="change-quantity"
               value={props.product.qty}
               onChange={(e) =>
                 props.dispatch({
@@ -39,8 +43,8 @@ const CheckOutCard = (props) => {
                 })
               }
             />
-          </p>
-          <p
+          </li>
+          <li
             fontSize="20px"
             style={{ cursor: "pointer" }}
             onClick={() =>
@@ -51,9 +55,11 @@ const CheckOutCard = (props) => {
             }
           >
             Delete
-          </p>
-          <p className="">see more like this</p>
-        </div>
+          </li>
+          <li>Save for later</li>
+        </ul>
+        <p styele={{fontSize:12,color:"#007185"}}>see more like this</p>
+      </div>
     </div>
   );
 };

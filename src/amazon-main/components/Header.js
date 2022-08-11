@@ -5,8 +5,9 @@ import IndianFlag from "../media/indian-flag.jpg";
 import { Link } from "react-router-dom";
 import { CartState } from "../functionality/Context.js";
 import { AiFillHeart } from "react-icons/ai";
-import { FaShoppingCart, FaSearch } from "react-icons/fa";
-import { FiMapPin } from "react-icons/fi";
+import {FaSearch } from "react-icons/fa";
+import { FiMapPin,FiShoppingCart } from "react-icons/fi";
+import {RiArrowDropDownLine} from "react-icons/ri"
 
 const Header = () => {
   const {
@@ -35,9 +36,10 @@ const Header = () => {
         </div>
 
         <div className="search-bar">
-          <span className="search-bar-text">All&#709;</span>
+          <span className="search-bar-text">All <RiArrowDropDownLine/></span>
           <input className="search-bar-input" type="text"></input>
-          <FaSearch className="search-bar-icon" />
+          <span className="search-bar-icon"> <FaSearch/></span>
+
         </div>
 
         <div className="header-options">
@@ -54,17 +56,21 @@ const Header = () => {
             <span className="header-option-menu-one">Return</span>
             <span className="header-option-menu-two">& Order</span>
           </div>
-          <Link to="/WishListPage">
+        </div>
+        <div className="checkout-box">
+        <Link to="/WishListPage">
             <div className="header-basket">
               {" "}
               <AiFillHeart
-                style={{ color: "white", fontSize: "1.3rem", margin: 5 }}
+                style={{ color: "red", fontSize: "1.3rem", margin: 5 }}
               />
             </div>
           </Link>
           <Link to="/CheckOutPage">
             <div className="header-basket">
-              <FaShoppingCart />
+              <FiShoppingCart 
+              style={{ color: "#fff", fontSize: "1.5rem", margin: 5 }}
+              />
               <span className="header-basket-count">{cart.length}</span>
               <span className="header-basket-text">Cart</span>
             </div>
@@ -74,7 +80,7 @@ const Header = () => {
 
       <div className="secondNavbar">
         <div className="secondNavbar-text-content">
-          <Link to="/ProductPage">≡ All</Link>
+          <Link to="/ProductPage"> All<RiArrowDropDownLine style={{color: "#fff"}}/></Link>
           <Link to="/ProductPage">Fresh</Link>
           <Link to="/ProductPage">Mobiles</Link>
           <Link to="/ProductPage">Baby</Link>

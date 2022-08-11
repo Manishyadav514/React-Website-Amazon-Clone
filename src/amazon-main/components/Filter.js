@@ -29,7 +29,7 @@ export const Filter = () => {
           <li>
             <form>
               <label
-                for="default-search"
+                htmlFor="default-search"
                 className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
               >
                 Search
@@ -45,9 +45,9 @@ export const Filter = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     ></path>
                   </svg>
@@ -70,13 +70,51 @@ export const Filter = () => {
           </li>
           <li>
             <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-              <input
-                inline
-                label="Price low to high"
+              <button
+                className="cursor-pointer ml-2 w-full text-sm font-medium text-gray-900  dark:text-gray-300 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                label="Price high to low"
                 name="group1"
                 type="radio"
-                id={`inline-1`}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                id={`inline-2`}
+                onClick={() =>
+                  FilterDispatch({
+                    type: "SORT_BY_PRICE",
+                    payload: "LowToHigh",
+                  })
+                }
+              >       
+              Low to High
+              </button>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+              <button
+                className="cursor-pointer ml-2 w-full text-sm font-medium text-gray-900  dark:text-gray-300 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500 "
+                label="Price high to low"
+                name="group1"
+                type="radio"
+                id={`inline-2`}
+                onClick={() =>
+                  FilterDispatch({
+                    type: "SORT_BY_PRICE",
+                    payload: "HighToLow",
+                  })
+                }
+                checked={sort === "HighToLow" ? true : false}
+              >       
+              High to Low
+              </button>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+              <input
+                className="cursor-pointer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                label="Price high to low"
+                name="group1"
+                type="radio"
+                id={`inline-2`}
                 onChange={() =>
                   FilterDispatch({
                     type: "SORT_BY_PRICE",
@@ -86,18 +124,17 @@ export const Filter = () => {
                 checked={sort === "lowToHigh" ? true : false}
               />
               <label
-                for="default-radio-4"
+                htmlFor="default-radio-6"
                 className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300"
               >
-                Low to High
+              Low to High
               </label>
             </div>
           </li>
           <li>
             <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
               <input
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                inline
+                className="cursor-pointer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                 label="Price high to low"
                 name="group1"
                 type="radio"
@@ -111,7 +148,7 @@ export const Filter = () => {
                 checked={sort === "HighToLow" ? true : false}
               />
               <label
-                for="default-radio-6"
+                htmlFor="default-radio-6"
                 className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300"
               >
                 High to Low
@@ -122,8 +159,7 @@ export const Filter = () => {
             <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
               <input
                 value=""
-                className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                inline
+                className="cursor-pointer w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                 label="Remove Out Stock"
                 name="group1"
                 type="checkbox"
@@ -135,7 +171,7 @@ export const Filter = () => {
                 }
               />
               <label
-                for="checkbox-item-4"
+                htmlFor="checkbox-item-4"
                 className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300"
               >
                 In Stock
@@ -143,11 +179,10 @@ export const Filter = () => {
             </div>
           </li>
           <li>
-            <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+            <div className="cursor-pointer flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
               <input
                 value=""
                 className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                inline
                 label="Fast Delivery"
                 name="group1"
                 type="checkbox"
@@ -159,7 +194,7 @@ export const Filter = () => {
                 }
               />
               <label
-                for="checkbox-item-6"
+                htmlFor="checkbox-item-6"
                 className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300"
               >
                 Fast Delivery
@@ -167,7 +202,8 @@ export const Filter = () => {
             </div>
           </li>
           <li>
-            <label>Rating</label>
+                        <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+            <label className="text-sm px-2">Rating</label>
             {/* <Rating
             rating={rate}
             onClick={(i) => setRating(i + 1)}
@@ -183,10 +219,12 @@ export const Filter = () => {
               }
               style={{ cursor: "pointer" }}
             />
+            </div>
           </li>
           <li>
+          <div className="flex justify-center content-center items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
             <button
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onClick={() =>
                 FilterDispatch({
                   type: "CLEAR_FILTER",
@@ -195,6 +233,7 @@ export const Filter = () => {
             >
               Clear Filters
             </button>
+            </div>
           </li>
         </ul>
       </div>
