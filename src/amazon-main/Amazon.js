@@ -19,7 +19,7 @@ const Amazon = () => {
         <Route exact path="/WishListPage" element={<><Header/><WishListPage/></>}/> 
         <Route exact path="/" element={<><Header/><HomePage/></>}/>  
         <Route exact path="/LoginPage" element={<><LoginPage/></>}/>  
-        <Route exact path="/ProductPage/productID" element={<><Header/><ProductDetails/></>}/>  
+        <Route exact path="/ProductPage/:productID" element={<><Header/><ProductDetails/></>}/>  
         {/* <Route path="/person/:personId" component={PersonPage} /> */}
         </Routes>
       </Router>

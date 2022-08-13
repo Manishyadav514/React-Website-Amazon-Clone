@@ -16,7 +16,7 @@ const WishListPage = () => {
         {wishlist.map((product) => (
           <CheckOutCard dispatch={dispatch} product={product}/>
         ))}
-      </div> : <Link to="/"><div className="wishlist-button-text">Wishlist is Empty, Add some Products!</div></Link>
+      </div> : <Link to="/"><div className="wishlist-button-text ">Wishlist is Empty, Add some Products!</div></Link>
       }
 
       

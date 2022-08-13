@@ -93,7 +93,7 @@
   justify-content: space-evenly;
   margin: 10px 0 10px 7px;
 }
-.checkout-box{
+.header-checkout-box{
   display: flex;
   margin: 10px 0 10px 7px;
   gap: 10px;
@@ -146,6 +146,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .secondNavbar-text-content > p {
   color: white;

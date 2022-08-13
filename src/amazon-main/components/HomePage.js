@@ -1,6 +1,8 @@
 import React from "react";
 import Banner from "../media/banner (1).jpg";
 import HomeCard from "./HomeCard.js";
+import {HomeCard2} from "./HomeCard.js";
+
 import "./HomePage.css";
 
 const ProductPage = () => {
@@ -62,6 +64,9 @@ const ProductPage = () => {
       <div className="home">
         <div className="home-container">
           <img className="home-image" src={Banner} alt="banner" />
+          <div className="home-card-container">
+            <HomeCard2/>
+          </div>
           <div className="product-card-container">
             {/* <HomeCard products={products}/> */}
             <HomeCard

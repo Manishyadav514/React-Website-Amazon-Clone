@@ -1,0 +1,90 @@
+.homeCard-container{
+    width: 100%;
+    background: cyan;
+    z-index: 999;
+    display: flex;
+}
+.homeCard-box{
+    width: 100%;
+    background: red;
+    z-index: 999;
+    display: flex;
+}
+
+.img1 {
+grid-area: img1;
+}
+.img2 {
+grid-area: img2;
+}
+.img3 {
+grid-area: img3;
+}
+
+.img4 {
+grid-area: img4;
+}
+.grid-container {
+display: grid;
+background-color: rgb(246, 249, 252);
+border: 1px solid rgb(167, 167, 167);
+grid-template-areas:
+    "img1 img2"
+    "img3 img4";
+padding: 10px;
+margin: 5px;
+}
+  
+  @media only screen and (max-width: 960px) {
+
+  }
+  
+  .image-box {
+    width: 180px;
+    aspect-ratio: auto 180 / 180;
+    height: 180px;
+  }
+  .card-image {
+    height: 100%;
+    object-fit: fill;
+  }
+  .product-description {
+    font-size: 14px;
+    color: "#565959"
+  }
+  .product-img1ee {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f1111;
+    cursor: pointer;
+  }
+  .product-img4 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .change-quantity{
+    text-align: center;
+    width: 30px;
+    background: #F0F2F2;
+    border-radius: 5px;
+    margin: 0px 10px 0px 10px;
+  }
+  .imgs-update{
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+  align-imgs: center;
+  }
+  .imgs-update li{
+    background: 0 0;
+    border: 0;
+    color: #007185;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    font: inherit;
+    line-height: inherit;
+    font-size: 12px;
+  }
+  

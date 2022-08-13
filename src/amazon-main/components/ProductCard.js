@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import Rating from "./Rating.js";
 import { CartState } from "../functionality/Context.js";
-import ProductDetails from "./ProductDetails";
 import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
@@ -29,7 +28,7 @@ const ProductCard = (props) => {
           <img
             className="p-8 rounded-t-lg"
             src={props.product.image}
-            alt="product"
+            alt={props.product.name}
           ></img>
         </Link>
         <div className="px-5 pb-5">
@@ -57,7 +56,7 @@ const ProductCard = (props) => {
               Rs {props.product.price}
             </span>
 
-            <div className="button-box">
+            <div className="flex align-center justify-center gap-3">
               {/* WishLIst */}
               {wishlist.some((p) => p.id === props.product.id) ? (
                 <AiFillHeart

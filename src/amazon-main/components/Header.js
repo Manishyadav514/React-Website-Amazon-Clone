@@ -57,7 +57,7 @@ const Header = () => {
             <span className="header-option-menu-two">& Order</span>
           </div>
         </div>
-        <div className="checkout-box">
+        <div className="header-checkout-box">
         <Link to="/WishListPage">
             <div className="header-basket">
               {" "}

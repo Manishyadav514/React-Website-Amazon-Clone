@@ -82,8 +82,8 @@ export const Filter = () => {
                     payload: "LowToHigh",
                   })
                 }
-              >       
-              Low to High
+              >
+                Low to High
               </button>
             </div>
           </li>
@@ -102,8 +102,8 @@ export const Filter = () => {
                   })
                 }
                 checked={sort === "HighToLow" ? true : false}
-              >       
-              High to Low
+              >
+                High to Low
               </button>
             </div>
           </li>
@@ -127,7 +127,7 @@ export const Filter = () => {
                 htmlFor="default-radio-6"
                 className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300"
               >
-              Low to High
+                Low to High
               </label>
             </div>
           </li>
@@ -202,37 +202,36 @@ export const Filter = () => {
             </div>
           </li>
           <li>
-                        <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-            <label className="text-sm px-2">Rating</label>
-            {/* <Rating
+            <div className="cursor-pointer flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+              <label className="text-sm px-2">Rating</label>
+              {/* <Rating
             rating={rate}
             onClick={(i) => setRating(i + 1)}
             style={{ cursor: "pointer" }}
           /> */}
-            <Rating
-              rating={byRating}
-              onClick={(i) =>
-                FilterDispatch({
-                  type: "FILTER_BY_RATING",
-                  payload: i + 1,
-                })
-              }
-              style={{ cursor: "pointer" }}
-            />
+              <Rating
+                rating={byRating}
+                onClick={(i) =>
+                  FilterDispatch({
+                    type: "FILTER_BY_RATING",
+                    payload: i + 1,
+                  })
+                }
+              />
             </div>
           </li>
           <li>
-          <div className="flex justify-center content-center items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-            <button
-              className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              onClick={() =>
-                FilterDispatch({
-                  type: "CLEAR_FILTER",
-                })
-              }
-            >
-              Clear Filters
-            </button>
+            <div className="flex justify-center content-center items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
+              <button
+                className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() =>
+                  FilterDispatch({
+                    type: "CLEAR_FILTER",
+                  })
+                }
+              >
+                Clear Filters
+              </button>
             </div>
           </li>
         </ul>
