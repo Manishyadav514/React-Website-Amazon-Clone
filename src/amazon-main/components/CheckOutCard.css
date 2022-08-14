@@ -18,7 +18,7 @@
   grid-area: function;
 }
 
-.grid-container {
+.checkoutCard-grid-container {
   display: grid;
   background-color: rgb(246, 249, 252);
   border: 1px solid rgb(167, 167, 167);
@@ -32,7 +32,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .grid-container {
+  .checkoutCard-grid-container {
     display: grid;
     grid-template-areas:
       "image title  title title"
@@ -51,11 +51,11 @@
   height: 100%;
   object-fit: fill;
 }
-.product-description {
+.checkoutCard-product-description {
   font-size: 14px;
   color: "#565959"
 }
-.product-title {
+.checkoutcard-product-title {
   font-size: 18px;
   font-weight: 700;
   color: #0f1111;

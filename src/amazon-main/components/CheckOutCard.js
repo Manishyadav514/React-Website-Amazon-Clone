@@ -2,10 +2,10 @@ import "./CheckOutCard.css";
 
 const CheckOutCard = (props) => {
   return (
-    <div id={props.product.id} className="grid-container">
+    <div id={props.product.id} className="checkoutCard-grid-container">
       <div class="item1">
-        <h5 className="product-title">{props?.product?.name}</h5>
-        <p className="product-description"> {props?.product?.description}</p>
+        <h5 className="checkoutCard-product-title">{props?.product?.name}</h5>
+        <p className="checkoutCard-product-description"> {props?.product?.description}</p>
       </div>
       <div class="item2">
         <div className="image-box">

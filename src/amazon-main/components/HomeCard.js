@@ -43,7 +43,7 @@ const ProductCard = ({ id, title, image, price, rating, description }) => {
     <>
       <div className="product">
         <p className="product-titleee">{title}</p>
-        <p className="product-info">{description}</p>
+        <p className="home-product-info">{description}</p>
         <p className="product-price">
           <small>₹</small>
           <strong>{price}</strong>

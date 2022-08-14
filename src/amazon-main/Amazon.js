@@ -8,19 +8,19 @@ import LoginPage from "./components/LoginPage.js"
 import Rating from "./components/Rating.js"
 import HomePage from "./components/HomePage.js";
 import ProductDetails from "./components/ProductDetails"
+import Footer from "./components/Footer"
 
 const Amazon = () => {
   return (
     <>
        <Router>
         <Routes>
-        <Route exact path="/CheckOutPage" element={<><Header/><CheckOutPage/></>}/>
-        <Route exact path="/ProductPage" element={<><Header/><Products/><Rating/></>}/> 
-        <Route exact path="/WishListPage" element={<><Header/><WishListPage/></>}/> 
-        <Route exact path="/" element={<><Header/><HomePage/></>}/>  
+        <Route exact path="/CheckOutPage" element={<><Header/><CheckOutPage/><Footer/></>}/>
+        <Route exact path="/ProductPage" element={<><Header/><Products/><Rating/><Footer/></>}/> 
+        <Route exact path="/WishListPage" element={<><Header/><WishListPage/><Footer/></>}/> 
+        <Route exact path="/" element={<><Header/><HomePage/><Footer/></>}/>  
         <Route exact path="/LoginPage" element={<><LoginPage/></>}/>  
-        <Route exact path="/ProductPage/:productID" element={<><Header/><ProductDetails/></>}/>  
-        {/* <Route path="/person/:personId" component={PersonPage} /> */}
+        <Route exact path="/ProductPage/:productID" element={<><Header/><ProductDetails/><Footer/></>}/>  
         </Routes>
       </Router>
     </>
