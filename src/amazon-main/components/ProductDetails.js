@@ -17,7 +17,8 @@ const ProductDetails = ({ match }) => {
   useEffect(() => {
     setSearchData(data.filter((product) => product.id === productID));
   }, [productID]);
-  console.log("productID", productID, searchData);
+  // console.log("productID", productID, searchData);
+  
   return (
     <div className="product-info">
       <div className="item-image-parent">

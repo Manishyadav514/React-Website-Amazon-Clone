@@ -1,70 +1,58 @@
 import React from "react";
 import "./HomeCard.css";
+import { Link } from "react-router-dom";
 
-export const HomeCard2 = () => {
+export const HomeCardFour = (props) => {
   return (
     <>
-      <div className="homeCard-container">
-        NewCommerce
-        <div className="homeCard-box">
-          {/* <div className="homeCard-images">
-            <img alt="img1">1</img>
-            <img alt="img2">2</img>
+      <div className="homeCard-box">
+        <div className="homeCard-title">
+          <p>{props?.title}</p>
+        </div>
+        <div className="homeCard-grid">
+          <div className="image1">
+            <Link to="/ProductPage">
+              <img src={props?.image1} alt="Cart"></img>
+            </Link>
+            <p>{props?.text1}</p>
           </div>
-          <div className="homeCard-images">
-            <img alt="img3">3</img>
-            <img alt="img4">4</img>
-          </div> */}
+          <div className="image2">
+            <Link to="/ProductPage">
+              <img src={props?.image2} alt="Cart"></img>
+            </Link>
+            <p>{props?.text2}</p>
+          </div>
+          <div className="image3">
+            <Link to="/ProductPage">
+              <img src={props?.image3} alt="Cart"></img>
+            </Link>
+            <p>{props?.text3}</p>
+          </div>
+          <div className="image4">
+            <Link to="/ProductPage">
+              <img src={props?.image4} alt="Cart"></img>
+            </Link>
+            <p>{props?.text4}</p>
+          </div>
         </div>
       </div>
     </>
   );
 };
 
-const ProductCard = ({ id, title, image, price, rating, description }) => {
-  // console.log(useStateValue);
-  // const [{basket} , dispatch] = useStateValue();
-  // console.log("Basket", basket);
-  const addToBasket = () => {
-    console.log("addToBasket");
-    // dispatch({
-    //   type: "ADD_TO_BASKET",
-    //   item: {
-    //     id: id,
-    //     title: title,
-    //     image: image,
-    //     price: price,
-    //     rating: rating
-    //   },
-    // });
-  };
-
+export const HomeCardOne = (props) => {
   return (
     <>
-      <div className="product">
-        <p className="product-titleee">{title}</p>
-        <p className="home-product-info">{description}</p>
-        <p className="product-price">
-          <small>₹</small>
-          <strong>{price}</strong>
-        </p>
-        <div className="product-rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p>⭐</p>
-            ))}
-          {Array(5 - rating)
-            .fill()
-            .map((_, i) => (
-              <p>✰</p>
-            ))}
+      <div className="homeCard-box">
+        <div className="homeCard-title">
+          <p>{props?.title}</p>
         </div>
-        <img src={image} alt="Cart"></img>
-        <button onClick={addToBasket}>Add to cart</button>
+        <div className="homeCard-one">
+          <Link to="/ProductPage">
+            <img src={props?.image} alt="Cart"></img>
+          </Link>
+        </div>
       </div>
     </>
   );
 };
-
-export default ProductCard;

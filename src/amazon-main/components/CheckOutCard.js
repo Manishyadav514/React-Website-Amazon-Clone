@@ -2,12 +2,15 @@ import "./CheckOutCard.css";
 
 const CheckOutCard = (props) => {
   return (
-    <div id={props.product.id} className="checkoutCard-grid-container">
-      <div class="item1">
+    <div id={props?.product?.id} className="checkoutCard-grid-container">
+      <div className="item1">
         <h5 className="checkoutCard-product-title">{props?.product?.name}</h5>
-        <p className="checkoutCard-product-description"> {props?.product?.description}</p>
+        <p className="checkoutCard-product-description">
+          {" "}
+          {props?.product?.description}
+        </p>
       </div>
-      <div class="item2">
+      <div className="item2">
         <div className="image-box">
           <img
             className="card-image"
@@ -16,15 +19,15 @@ const CheckOutCard = (props) => {
           />
         </div>
       </div>
-      <div class="item3">
+      <div className="item3">
         <p style={{ color: "#007600" }}>In stock</p>
         <p style={{ color: "#565959" }}>Eligible for FREE Shipping</p>
       </div>
-      <div class="item4">
+      <div className="item4">
         {" "}
         <div className="product-price">₹ {props?.product?.price}</div>
       </div>
-      <div class="item5">
+      <div className="item5">
         <ul className="items-update">
           <li>
             <input
@@ -58,7 +61,7 @@ const CheckOutCard = (props) => {
           </li>
           <li>Save for later</li>
         </ul>
-        <p styele={{fontSize:12,color:"#007185"}}>see more like this</p>
+        <p styele={{ fontSize: 12, color: "#007185" }}>see more like this</p>
       </div>
     </div>
   );

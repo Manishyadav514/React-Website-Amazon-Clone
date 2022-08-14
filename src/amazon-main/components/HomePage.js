@@ -1,127 +1,82 @@
 import React from "react";
 import Banner from "../media/banner (1).jpg";
-import HomeCard from "./HomeCard.js";
-import {HomeCard2} from "./HomeCard.js";
-
 import "./HomePage.css";
+import { HomeCardFour, HomeCardOne } from "./HomeCard.js";
 
-const ProductPage = () => {
-
-  // const products = [
-  //   {
-  //     id: 1, 
-  //     title:"MOKOBARA Luggage Polycarbonate Hardsided Suitcase Trolley (Cabin Pro, Crypto)",
-  //     description:"Unbreakable & Lightweight Made of German Makrolon poly-carbonate shell that is flexible & strong.",
-  //     rating:5,
-  //     price:100,
-  //     image:"https://m.media-amazon.com/images/I/715wkAE0FQL._AC_SY135_.jpg",
-  //   },
-  //   {              
-  //   id: 2,
-  //   title:"Wall Shelf",
-  //   description:"Acco & deco Hexagon Wall Shelf for Living Room Stylish | Hexagonal Designer Wooden Shelves for Home Decor Items| Display Rack for Bedroom, Kitchen, Office and More (Set of 6| Color-Orange& Brown)",
-  //   rating:3,
-  //   price: 250,
-  //   image:"https://m.media-amazon.com/images/I/516yyR3LjgS._SX425_.jpg",
-  // },
-  // {
-  //   id: 3,
-  //   title:"Mosquito Net",
-  //   description:"Hexagonal Designer Wooden Shelves for Home Decor Items",
-  //   rating:4,
-  //   price: 400,
-  //   image:"https://m.media-amazon.com/images/I/516yyR3LjgS._SX425_.jpg",
-  // },
-  // {
-  //   id: 4,
-  //   title:"Extension Board",
-  //   description:"Goldmedal Curve Plus 205101 Plastic 240 i-Strip LED Spike Guard Adaptors (White and Red)",
-  //   rating:3,
-  //   price: 200,
-  //   image:"https://m.media-amazon.com/images/I/61hYn+cR40L._AC_SY200_.jpg",
-  // },
-  // {
-  //   id: 5,
-  //   title:"Mosquito Net",
-  //   description:"Hexagonal Designer Wooden Shelves for Home Decor Items",
-  //   rating:4,
-  //   price: 400,
-  //   image:"https://m.media-amazon.com/images/I/516yyR3LjgS._SX425_.jpg",
-  // },
-  // {
-  //   id: 6,
-  //   title:"SanDisk Cruzer Blade 32GB USB Flash Drive",
-  //   description:"Ultra-compact and portable USB flash drive Share your photos, videos, songs and other files between computers with ease",
-  //   rating:4,
-  //   price: 400,
-  //   image:"https://m.media-amazon.com/images/I/61DjwgS4cbL._AC_SY200_.jpg",
-  // }
-  // ];
-
-
+const HomePage = () => {
   return (
     <>
       <div className="home">
         <div className="home-container">
           <img className="home-image" src={Banner} alt="banner" />
           <div className="home-card-container">
-            <HomeCard2/>
-          </div>
-          <div className="product-card-container">
-            {/* <HomeCard products={products}/> */}
-            <HomeCard
-              id={1}
-              title="MOKOBARA Luggage Polycarbonate Hardsided Suitcase Trolley (Cabin Pro, Crypto)"
-              description="Unbreakable & Lightweight Made of German Makrolon poly-carbonate shell that is flexible & strong."
-              rating={5}
-              price={5.5}
-              image="https://m.media-amazon.com/images/I/715wkAE0FQL._AC_SY135_.jpg"
+            <HomeCardFour
+              title="Amazon Pay "
+              text1="Flight tickets"
+              text2="Bus tickets"
+              text3="Train tickets"
+              text4="Travel Products"
+              image1="/flight.jpg"
+              image2="/bus.jpg"
+              image3="/train.jpg"
+              image4="/travel.jpg"
             />
-            <HomeCard
-              id={2}
-              title="Wall Shelf"
-              description="Acco & deco Hexagon Wall Shelf for Living Room Stylish | Hexagonal Designer Wooden Shelves for Home Decor Items| Display Rack for Bedroom, Kitchen, Office and More (Set of 6| Color-Orange& Brown)"
-              rating={3}
-              price={2}
-              image="https://m.media-amazon.com/images/I/516yyR3LjgS._SX425_.jpg"
+            <HomeCardFour
+              title="Pick up where you left off"
+              text1="Dabur Chyawanpras..."
+              text2="Wakefit Hollow Fibr…"
+              text3="Xtore® Home Decor…"
+              text4="Nivea Deep Impact…"
+              image1="/pick1.jpg"
+              image2="/pick2.jpg"
+              image3="/pick3.jpg"
+              image4="/pick4.jpg"
+            />
+            <HomeCardFour
+              title="Keep shopping for"
+              text1="Campus Men's HAS…"
+              text2="Campus new..."
+              text3="Petronics Extension"
+              text4="Amazon Brand Pilo..."
+              image1="/keep1.jpg"
+              image2="/keep2.jpg"
+              image3="/keep3.jpg"
+              image4="/keep4.jpg"
+            />
+            <HomeCardOne title="Join Prime" image="/one-5.jpg" />
+            {/* <HomeCardOne title="Join Prime" image="/kindle.jpg" /> */}
+            {/* <img alt="kindle" src="./kindle.jpg" style={{zIndex:999, width:300, height: 200, marginTop: 10}}></img> */}
+          </div>
+          <div className="home-card-container">
+            <HomeCardOne
+              title="Household"
+              image="/fresh1.jpg"
+            />
+            <HomeCardOne
+              title="Snacks"
+              image="/fresh2.jpg"
+            />
+            <HomeCardOne
+              title="Health Conscious"
+              image="/fresh3.jpg"
+            />
+            <HomeCardOne
+              title="Cleansing Products"
+              image="/fresh4.jpg"
             />
           </div>
           <div className="home-card-container">
-            <HomeCard
-              id={3}
-              title="Wall Shelf"
-              description="Acco & deco Hexagon Wall Shelf for Living Room Stylish | Hexagonal Designer Wooden Shelves for Home Decor Items| Display Rack for Bedroom, Kitchen, Office and More (Set of 6| Color-Orange& Brown)"
-              rating={3}
-              price={2}
-              image="https://m.media-amazon.com/images/I/719pZmdrtqL._AC_SY200_.jpg"
-            />
-            <HomeCard
-              id={4}
-              title="Extension Board"
-              description="Goldmedal Curve Plus 205101 Plastic 240 i-Strip LED Spike Guard Adaptors (White and Red)"
-              rating={3}
-              price={2}
-              image="https://m.media-amazon.com/images/I/61hYn+cR40L._AC_SY200_.jpg"
-            />
-            <HomeCard
-              id={5}
-              title="Wall Shelf"
-              description="Acco & deco Hexagon Wall Shelf for Living Room Stylish | Hexagonal Designer Wooden Shelves for Home Decor Items| Display Rack for Bedroom, Kitchen, Office and More (Set of 6| Color-Orange& Brown)"
-              rating={3}
-              price={2}
-              image="https://m.media-amazon.com/images/I/516yyR3LjgS._SX425_.jpg"
+            <HomeCardOne title="Best deals in Electronics" image="/one-1.jpg" />
+            <HomeCardFour
+              title="Checkout Other Brands"
+              image1="/logo-1.jpg"
+              image2="/logo-5.png"
+              image3="/logo-2.png"
+              image4="/logo-4.png"
             />
           </div>
           <div className="home-card-container">
-            <HomeCard
-              id={6}
-              title="SanDisk Cruzer Blade 32GB USB Flash Drive"
-              description="Ultra-compact and portable USB flash drive
-              Share your photos, videos, songs and other files between computers with ease"
-              rating={4}
-              price={4}
-              image="https://m.media-amazon.com/images/I/61DjwgS4cbL._AC_SY200_.jpg"
-            />
+            <HomeCardOne title="Binge Watch Prime Videos" image="/one-3.jpg" />
           </div>
         </div>
       </div>
@@ -129,4 +84,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default HomePage;

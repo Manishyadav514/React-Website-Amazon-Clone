@@ -42,7 +42,7 @@ const CheckOutPage = () => {
         <div className="checkout-item-list">
           <div className="checkout-item-list-item">
             {cart.map((product) => (
-              <CheckOutCard dispatch={dispatch} product={product} />
+              <CheckOutCard id={product?.id} dispatch={dispatch} product={product} />
             ))}
           </div>
         </div>
