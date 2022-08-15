@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../media/banner (1).jpg";
+import Banner from "../media/banner (5).jpg";
 import "./HomePage.css";
 import { HomeCardFour, HomeCardOne } from "./HomeCard.js";
 
@@ -10,17 +10,6 @@ const HomePage = () => {
         <div className="home-container">
           <img className="home-image" src={Banner} alt="banner" />
           <div className="home-card-container">
-            <HomeCardFour
-              title="Amazon Pay "
-              text1="Flight tickets"
-              text2="Bus tickets"
-              text3="Train tickets"
-              text4="Travel Products"
-              image1="/flight.jpg"
-              image2="/bus.jpg"
-              image3="/train.jpg"
-              image4="/travel.jpg"
-            />
             <HomeCardFour
               title="Pick up where you left off"
               text1="Dabur Chyawanpras..."
@@ -43,27 +32,25 @@ const HomePage = () => {
               image3="/keep3.jpg"
               image4="/keep4.jpg"
             />
+            <HomeCardFour
+              title="Amazon Pay "
+              text1="Flight tickets"
+              text2="Bus tickets"
+              text3="Train tickets"
+              text4="Travel Products"
+              image1="/flight.jpg"
+              image2="/bus.jpg"
+              image3="/train.jpg"
+              image4="/travel.jpg"
+            />
             <HomeCardOne title="Join Prime" image="/one-5.jpg" />
-            {/* <HomeCardOne title="Join Prime" image="/kindle.jpg" /> */}
             {/* <img alt="kindle" src="./kindle.jpg" style={{zIndex:999, width:300, height: 200, marginTop: 10}}></img> */}
           </div>
           <div className="home-card-container">
-            <HomeCardOne
-              title="Household"
-              image="/fresh1.jpg"
-            />
-            <HomeCardOne
-              title="Snacks"
-              image="/fresh2.jpg"
-            />
-            <HomeCardOne
-              title="Health Conscious"
-              image="/fresh3.jpg"
-            />
-            <HomeCardOne
-              title="Cleansing Products"
-              image="/fresh4.jpg"
-            />
+            <HomeCardOne title="Household" image="/fresh1.jpg" />
+            <HomeCardOne title="Snacks" image="/fresh2.jpg" />
+            <HomeCardOne title="Health Conscious" image="/fresh3.jpg" />
+            <HomeCardOne title="Cleansing Products" image="/fresh4.jpg" />
           </div>
           <div className="home-card-container">
             <HomeCardOne title="Best deals in Electronics" image="/one-1.jpg" />

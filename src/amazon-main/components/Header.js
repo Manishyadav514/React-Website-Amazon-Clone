@@ -38,7 +38,7 @@ const Header = () => {
         <div className="search-bar">
           <span className="search-bar-text">All <RiArrowDropDownLine/></span>
           <input className="search-bar-input" type="text"></input>
-          <span className="search-bar-icon"> <FaSearch/></span>
+          <span className="search-bar-icon"> <Link to="/ProductPage"><FaSearch/></Link></span>
 
         </div>
 
