@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard.js";
 import { CartState } from "../functionality/Context";
 import "./ProductPage.css";
 import { Filter } from "./Filter.js";
+
 const Products = () => {
   const {
     state: { products },
@@ -54,11 +55,9 @@ const Products = () => {
 
   return (
     <>
-      <div className="flex justify-between ">
-        <div className="filterContainer">
-          <Filter />
-        </div>
-        <div className="productContainer">
+      <Filter />
+      <div className="productPage-container">
+        <div className="productPage-productContainer">
           {FilteredProduct().map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}

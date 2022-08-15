@@ -1,22 +1,19 @@
-.home {
-display: -webkit-inline-box;
-justify-content: space-between;
-
+.productPage-container {
+  display: flex;
+  justify-content: space-between;
 }
-
-.filterContainer {
-display: flex;
-width: 23%;
-float: left;
-padding: 10px;
-flex-wrap: wrap;
-justify-content: space-around;
+.productPage-productContainer {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.productContainer {
-display: flex;
-width: 75%;
-float: right;
-padding: 10px;
-flex-wrap: wrap;
-justify-content: space-around;
+@media only screen and (max-width: 720px) {
+  .productPage-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
